@@ -1,0 +1,239 @@
+/*Global*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    background: #fff;
+    color: #3d3d3d;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+} */
+
+/* section {
+    padding: 108px;
+} */
+
+.row {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.row::before, .row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.brick-image .image-box{
+    width: 100%;
+    height: 300px;
+    /* height: 300px; */
+    object-fit: cover;
+}
+
+.image-box {
+    /* Here's the trick */
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.7);
+  
+    /* Basic background styles */
+    background: var(--image-url) center center;
+    background-size: cover;
+  
+    /* Here's the same styles we applied to our content-div earlier */
+    color: white;
+    min-height: 30vh;
+    /* width: 100%;
+    height: 300px;
+    object-fit: cover; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Add a transition, just for fun */
+    transition: box-shadow .3s ease-out;
+}
+.image-box:hover {
+      box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.2);
+}
+
+
+.brick-description {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    
+    
+
+} 
+
+/* .brick-description:hover { */
+    /* padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    /* color:blue; */
+    /* opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+    transition: .5s ease; */
+/* }  */
+
+
+.brick {
+    float: left;
+    width: 50%;
+    height: 300px;
+    position: absolute;
+    position: relative;
+}
+.brick-title{
+    font-size: 40px;
+    margin-bottom:0;
+    font-weight: bolder;
+}
+
+
+.brick-subtitle {
+    color: #fff;
+    font-size: 20px;
+    margin-top:0;
+}
+.brick-subtitle:hover {
+    color:grey;
+    cursor: pointer;
+}
+
+
+/* @media only screen and (min-width: 318px) and (max-width: 787px) { */
+
+
+    @media only screen and (max-width: 320px) { 
+    .row::before, .row::after {
+        clear: both;
+        content: "";
+        display: table-row;
+    }
+    .brick {
+        float: none;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        align-items: center;
+        
+    }
+    .brick-title{
+        font-size: 20px;
+    }
+    .brick-subtitle{
+        font-size:15px;
+    }
+}
+
+
+
+
+
+
+
+
+/* * {
+    box-sizing: border-box
+} */
+
+/* Container needed to position the overlay. Adjust the width as needed
+
+.container {
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+}
+
+/* Make the image to responsive */
+
+/* .image {
+    display: block;
+    width: 100%;
+    height: auto;
+} */
+
+/* The overlay effect - lays on top of the container and over the image */
+
+/* .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    /* Black see-through */
+    /* color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+} */ 
+
+/* When you mouse over the container, fade in the overlay title */
+
+/* .container:hover .overlay {
+    opacity: 1;
+} */ 
+
+
+
+
+
+
+/* .image-box {
+    /* Here's the trick */
+    /* box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.5); */
+  
+    /* Basic background styles */
+    /* background: var(--image-url) center center; */
+    /* background-size: cover; */
+  
+    /* Here's the same styles we applied to our content-div earlier */
+    /* color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+    
+    /* Add a transition, just for fun */
+    /* transition: box-shadow .3s ease-out;
+}
+  .image-box:hover {
+      box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.2);
+  }  */
+  
+  /* For demo only */
+  /* html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  h1 {
+    font-size: 40px; */
+  /* }   
